@@ -1,0 +1,19 @@
+#pragma once
+#include "tls/s2n_tls_parameters.h"
+
+#define sig_alg_check(a, b)	\
+	do {	\
+		if ((a) != (b))	{	\
+			POSIX_BAIL(S2N_ERR_INVALID_SIGNATURE_ALGORITHM);\
+		}	\
+	} while (0)
+
+typedef enum {
+	S2N_SIGNATURE_ANONYMOUS = S2N_TLS_SIGNATURE_ANONYMOUS;
+	S2N_SIGNATURE_RSA = S2N_TLS_SIGNATURE_RSA,
+	S2N_SIGNATURE_ECDSA = S2N_TLS_SIGNATURE_ECDSA,
+
+	S2N_SIGNATURE_RSA_PSS_RSAE = S2N_TLS_SIGNATURE_RSA_PSS_RSAE,
+	S2N_SIGNATURE_RSA_PSS_PSS = S2N_TLS_SIGNATURE_RSA_PSS_PSS,
+	S2N_SIGNATURE_MLDSA,
+} s2n_signature_algorithm;
