@@ -21,5 +21,5 @@ struct s2n_evp_digest {
 #define S2N_EVP_MD_CTX_FREE(md_ctx)  (EVP_MD_CTX_destroy(md_ctx))
 #endif
 
-#define S2N_EVP_PKEY_CTX_set_signature_md(ctx, md) \
+#define S2N_EVP_PKEY_CTX_set_signature_md(ctx, md)  \
 	EVP_PKEY_CTX_set_signature_md(ctx, (EVP_MD *) (uintptr_t) md)

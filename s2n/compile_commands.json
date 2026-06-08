@@ -1,0 +1,41 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-I/home/ducnh/cpp/s2n/s2n",
+      "-I/home/ducnh/cpp/s2n/s2n/api",
+      "-pedantic",
+      "-std=gnu99",
+      "-Wall",
+      "-Wcast-align",
+      "-Wcast-qual",
+      "-Wchar-subscripts",
+      "-Wcomment",
+      "-Wformat-security",
+      "-Wimplicit",
+      "-Wshadow",
+      "-Wsign-compare",
+      "-Wuninitialized",
+      "-Wunused",
+      "-Wwrite-strings",
+      "-Wa,--noexecstack",
+      "-Wno-deprecated-declarations",
+      "-Wno-missing-braces",
+      "-Wno-strict-prototypes",
+      "-Wno-unknown-pragmas",
+      "-Werror",
+      "-fvisibility=hidden",
+      "-DS2N_EXPORTS=1",
+      "-fPIC",
+      "-include",
+      "/home/ducnh/cpp/s2n/s2n/utils/s2n_prelude.h",
+      "-c",
+      "-o",
+      "CMakeFiles/s2n.dir/error/s2n_errno.c.o",
+      "/home/ducnh/cpp/s2n/s2n/error/s2n_errno.c"
+    ],
+    "directory": "/home/ducnh/cpp/s2n/s2n",
+    "file": "/home/ducnh/cpp/s2n/s2n/error/s2n_errno.c",
+    "output": "/home/ducnh/cpp/s2n/s2n/CMakeFiles/s2n.dir/error/s2n_errno.c.o"
+  }
+]

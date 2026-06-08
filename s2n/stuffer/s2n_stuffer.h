@@ -33,7 +33,7 @@ struct s2n_stuffer {
 #define s2n_stuffer_is_wiped(s) ((s)->high_water_mark == 0)
 #define s2n_stuffer_is_freed(s) ((s)->blob.data == NULL)
 
-S2N_RESULT s2n_stuffer_validate(const struct s2n_stuffer* stuffer)
+S2N_RESULT s2n_stuffer_validate(const struct s2n_stuffer* stuffer);
 int S2N_RESULT_MUST_USE s2n_stuffer_init(struct s2n_stuffer* stuffer, struct s2n_blob* in);
 int S2N_RESULT_MUST_USE s2n_stuffer_init_written(struct s2n_stuffer* stuffer, struct s2n_blob* in);
 int S2N_RESULT_MUST_USE s2n_stuffer_alloc(struct s2n_stuffer* stuffer, const uint32_t size);
@@ -141,3 +141,4 @@ int S2N_RESULT_MUST_USE s2n_stuffer_dhparams_from_pem(struct s2n_stuffer* pem, s
 bool s2n_is_base64_char(unsigned char c);
 
 int S2N_RESULT_MUST_USE s2n_stuffer_extract_blob(struct s2n_stuffer* stuffer, struct s2n_blob* out);
+

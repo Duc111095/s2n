@@ -55,7 +55,7 @@ const EVP_MD* s2n_hash_alg_to_evp_md(s2n_hash_algorithm alg);
 int s2n_hash_digest_size(s2n_hash_algorithm alg, uint8_t* out);
 bool s2n_hash_is_available(s2n_hash_algorithm alg);
 int s2n_hash_is_ready_for_input(struct s2n_hash_state* state);
-int s2n_hash_new(struct s2n_hash_state* state)
+int s2n_hash_new(struct s2n_hash_state* state);
 S2N_RESULT s2n_hash_state_validate(struct s2n_hash_state* state);
 int s2n_hash_init(struct s2n_hash_state* state, s2n_hash_algorithm alg);
 int s2n_hash_update(struct s2n_hash_state* state, const void* data, uint32_t size);
@@ -64,3 +64,5 @@ int s2n_hash_copy(struct s2n_hash_state* to, struct s2n_hash_state* from);
 int s2n_hash_reset(struct s2n_hash_state* state);
 int s2n_hash_free(struct s2n_hash_state* state);
 int s2n_hash_get_currently_in_hash_total(struct s2n_hash_state* state, uint64_t* out);
+
+
