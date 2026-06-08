@@ -9,10 +9,10 @@ uint32_t s2n_mem_get_page_size(void);
 int s2n_mem_cleanup(void);
 
 int S2N_RESULT_MUST_USE s2n_alloc(struct s2n_blob* b, uint32_t size);
-int S2N_RESULT_MUST_USE s2n_realloc(struct s2n_blob* b, uin32_t size);
+int S2N_RESULT_MUST_USE s2n_realloc(struct s2n_blob* b, uint32_t size);
 int s2n_free(struct s2n_blob* b);
 int s2n_free_without_wipe(struct s2n_blob* b);
-int s2n_free_object(uin8_t** p_data, uint32_t size);
+int s2n_free_object(uint8_t** p_data, uint32_t size);
 int S2N_RESULT_MUST_USE s2n_dup(struct s2n_blob* from, struct s2n_blob* to);
 
 int s2n_free_or_wipe(struct s2n_blob* b);
